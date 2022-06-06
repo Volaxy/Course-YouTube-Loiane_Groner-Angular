@@ -1,7 +1,12 @@
-<p>
-    Course of Loiane from {{ siteName }}
-</p>
+<article>
+    <h3>Interpolation</h3>
+    <p>String with interpolation: {{ url }}</p>
+    <!-- The templates too acepts mathematic expressions -->
+    <p>Result of 1 + 1 is {{ 1 + 1 }}</p>
+    <p>Result of 1 + 1 not is {{ 1 + 1 + getValue() }}</p>
 
-<ul>
-    <li *ngFor="let course of courses">{{ course }}</li>
-</ul>
+    <img src="{{ urlImage }}">
+    <br>
+    <!-- With the "[]" it identifies the binding property and the "{{}}" is no longer needed -->
+    <img [src]="urlImage">
+</article>

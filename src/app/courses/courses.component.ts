@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { CoursesService } from './courses.service';
-
 @Component({
 	selector: 'app-courses',
 	templateUrl: './courses.component.html',
@@ -9,20 +7,16 @@ import { CoursesService } from './courses.service';
 })
 export class CoursesComponent implements OnInit {
 
-	// We can set the value of the variable through the declaration itself or in the constructor
-	siteName: string;
+	url: string = "http://loiane.com";
+	urlImage: string = "http://lorempixel.com.br/800/600/?2";
 
-	courses: string[];
-
-	// The service is declarated in the code to will be ready to use
-	// The "private" says the variable is used only this class
-	constructor(private coursesService: CoursesService) {
-		this.siteName = "http://loiane.training";
-
-		this.courses = this.coursesService.getCourses();
-	}
+	constructor() {	}
 
 	ngOnInit(): void {
+	}
+
+	getValue() {
+		return 1;
 	}
 
 }
