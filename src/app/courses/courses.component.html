@@ -1,27 +1,20 @@
-<!-- The "#" creates a variable inside the HTML -->
-<select #class (change)="0">
-    <option value="alert-success">Success</option>
-    <option value="alert-fail">Fail</option>
-</select>
+<!-- With the "()", we define an event that will be performed when the condition inside the parentheses is fulfilled -->
+<button (click)="clickedButton()">Clique-me</button>
 
 <br>
 
-<!-- The Class binding is a form of property binding -->
-<!-- To apply a class for example, we put the word "class", then the name of the class that will be applied -->
-<!-- And enter the "", the condition that will be validated -->
-<div class="msg" [class.alert-success]="class.value == 'alert-success'">Success</div>
-<div class="msg" [class.alert-fail]="class.value == 'alert-fail'">Fail</div>
+<!-- To capture the event, we can pass the variable "$event" as a parameter, which will show all the information regarding the event -->
+<input type="text"
+    (keyup)="onKeyUp($event)"
+    (keyup.enter)="saveValue(inputField.value)"
+    (blur)="saveValue(inputField.value)"
+    #inputField> <!-- The variable references the element itself -->
 
-<br>
+<p>Current Value: {{ currentValue }}</p>
+<p>Saved Value: {{ savedValue }}</p>
 
-<!-- You can define the class directly through the property binding using the variable that is declared inside the HTML -->
-<div class="{{ class.value }}">
-    Colorized text according the combobox value
-</div>
-
-<br>
-
-<!-- We can apply a CSS style that does a validation (if), where we set the style's value if the condition is true or false -->
-<div [style.display]="class.value == 'alert-fail' ? 'none' : 'block'">
-    Block which be appear with the value of combobox
-</div>
+<span
+    (mouseover)="onMouseOverOut()"
+    (mouseout)="onMouseOverOut()"
+    [class.highlight]="isMouseOver"
+    >Hover over me</span>

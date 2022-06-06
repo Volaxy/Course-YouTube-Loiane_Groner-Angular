@@ -1,7 +1,4 @@
-.alert-success {
-    background-color: chartreuse;
-}
-
-.alert-fail {
-    background-color: orangered;
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
 }
