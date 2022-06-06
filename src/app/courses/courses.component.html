@@ -1,9 +1,7 @@
 <p>
-    <!-- This is called interpolation, where the value of variable declared in COMPONENT_NAME.component.ts is enclosed in the "{{}}" -->
     Course of Loiane from {{ siteName }}
 </p>
 
 <ul>
-    <!-- The "*ngFor" repeat the element (in this case, the <li>), traversing the array -->
     <li *ngFor="let course of courses">{{ course }}</li>
 </ul>
