@@ -1,12 +1,27 @@
-<article>
-    <h3>Interpolation</h3>
-    <p>String with interpolation: {{ url }}</p>
-    <!-- The templates too acepts mathematic expressions -->
-    <p>Result of 1 + 1 is {{ 1 + 1 }}</p>
-    <p>Result of 1 + 1 not is {{ 1 + 1 + getValue() }}</p>
+<!-- The "#" creates a variable inside the HTML -->
+<select #class (change)="0">
+    <option value="alert-success">Success</option>
+    <option value="alert-fail">Fail</option>
+</select>
 
-    <img src="{{ urlImage }}">
-    <br>
-    <!-- With the "[]" it identifies the binding property and the "{{}}" is no longer needed -->
-    <img [src]="urlImage">
-</article>
+<br>
+
+<!-- The Class binding is a form of property binding -->
+<!-- To apply a class for example, we put the word "class", then the name of the class that will be applied -->
+<!-- And enter the "", the condition that will be validated -->
+<div class="msg" [class.alert-success]="class.value == 'alert-success'">Success</div>
+<div class="msg" [class.alert-fail]="class.value == 'alert-fail'">Fail</div>
+
+<br>
+
+<!-- You can define the class directly through the property binding using the variable that is declared inside the HTML -->
+<div class="{{ class.value }}">
+    Colorized text according the combobox value
+</div>
+
+<br>
+
+<!-- We can apply a CSS style that does a validation (if), where we set the style's value if the condition is true or false -->
+<div [style.display]="class.value == 'alert-fail' ? 'none' : 'block'">
+    Block which be appear with the value of combobox
+</div>
