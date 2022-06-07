@@ -1,20 +1,38 @@
-<!-- With the "()", we define an event that will be performed when the condition inside the parentheses is fulfilled -->
-<button (click)="clickedButton()">Clique-me</button>
+<div>
+    <!-- The "[value]" represents the property "value" of tag <input>, and the "(input)" is the event of input -->
+    <input type="text"
+        [value]="name"
+        (input)="name = input.value"
+        #input
+    />
 
-<br>
+    <!-- The "ngModel" is the representation of an entity, which can be a simple property of a component or even an object. -->
+    <!-- "ngModelChange" is a property of "ngModel" for events (the $event.->target.value<- is not necessary) -->
+    <input type="text"
+        [ngModel]="name"
+        (ngModelChange)="name = $event"
+    />
 
-<!-- To capture the event, we can pass the variable "$event" as a parameter, which will show all the information regarding the event -->
-<input type="text"
-    (keyup)="onKeyUp($event)"
-    (keyup.enter)="saveValue(inputField.value)"
-    (blur)="saveValue(inputField.value)"
-    #inputField> <!-- The variable references the element itself -->
+    <!-- The "[(ngModel)]" is the join of "[ngModel]" and "(ngModelChange)" -->
+    <input type="text"
+        [(ngModel)]="name"
+    >
+    
+    <!-- The "bindon-ngModel" is tha same of "[(ngModel)]" -->
+    <input type="text"
+        bindon-ngModel="name"
+    >
 
-<p>Current Value: {{ currentValue }}</p>
-<p>Saved Value: {{ savedValue }}</p>
+    <p>You enter: {{ name }}</p>
+</div>
 
-<span
-    (mouseover)="onMouseOverOut()"
-    (mouseout)="onMouseOverOut()"
-    [class.highlight]="isMouseOver"
-    >Hover over me</span>
+<div>
+    <input type="text"
+        [(ngModel)]="person.name"
+    >
+    <input type="number"
+        [(ngModel)]="person.age"
+    >
+
+    <p>My name is {{ person.name }} and I've {{ person.age }}.</p>
+</div>

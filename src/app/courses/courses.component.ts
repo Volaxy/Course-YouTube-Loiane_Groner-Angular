@@ -7,29 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoursesComponent implements OnInit {
 
-	currentValue: string = "";
-	savedValue: string = "";
-	isMouseOver: boolean = false;
+	name: string = "abc";
+
+	person: any = {
+		name: "ex",
+		age: 5
+	}
 
 	constructor() {	}
 
 	ngOnInit(): void {
-	}
-
-	clickedButton() {
-		alert("Button clicked!");
-	}
-
-	onKeyUp(event: KeyboardEvent) {
-		this.currentValue = (<HTMLInputElement> event.target).value;
-	}
-
-	saveValue(value: string) {
-		this.savedValue = value;
-	}
-	
-	onMouseOverOut() {
-		this.isMouseOver = !this.isMouseOver;
 	}
 
 }
