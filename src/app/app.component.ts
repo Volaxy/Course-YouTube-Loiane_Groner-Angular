@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 	title = 'CoursesApplication';
+
+	onChangeValue(event: any) {
+		console.log(event.newValue);
+	}
 }
