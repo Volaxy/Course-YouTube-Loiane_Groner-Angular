@@ -1,38 +1,6 @@
 <div>
-    <!-- The "[value]" represents the property "value" of tag <input>, and the "(input)" is the event of input -->
-    <input type="text"
-        [value]="name"
-        (input)="name = input.value"
-        #input
-    />
+    <h1>Transfer Data Values to Other Components</h1>
 
-    <!-- The "ngModel" is the representation of an entity, which can be a simple property of a component or even an object. -->
-    <!-- "ngModelChange" is a property of "ngModel" for events (the $event.->target.value<- is not necessary) -->
-    <input type="text"
-        [ngModel]="name"
-        (ngModelChange)="name = $event"
-    />
-
-    <!-- The "[(ngModel)]" is the join of "[ngModel]" and "(ngModelChange)" -->
-    <input type="text"
-        [(ngModel)]="name"
-    >
-    
-    <!-- The "bindon-ngModel" is tha same of "[(ngModel)]" -->
-    <input type="text"
-        bindon-ngModel="name"
-    >
-
-    <p>You enter: {{ name }}</p>
-</div>
-
-<div>
-    <input type="text"
-        [(ngModel)]="person.name"
-    >
-    <input type="number"
-        [(ngModel)]="person.age"
-    >
-
-    <p>My name is {{ person.name }} and I've {{ person.age }}.</p>
+    <!-- Here we assign to the variable "name" inside the component "app-input-property" the value of "courseName" -->
+    <app-input-property [name]="courseName"></app-input-property>
 </div>

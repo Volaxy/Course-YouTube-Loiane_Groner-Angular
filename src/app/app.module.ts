@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses/courses.component';
+import { InputPropertyComponent } from './input-property/input-property.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-  		CoursesComponent
+  		CoursesComponent,
+    InputPropertyComponent
 	],
 	imports: [
 		BrowserModule,
