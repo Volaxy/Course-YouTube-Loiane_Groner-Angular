@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 
 @Component({
 	selector: 'app-output-property',
@@ -9,9 +9,11 @@ export class OutputPropertyComponent implements OnInit {
 
 	@Input() value: number = 0;
 
-	// The "EventEmitter" is an object which allow the variable will be send to the father component
-	// The "Output()" sends the variable to the parent component
 	@Output() changeValue = new EventEmitter();
+
+	// The "HTMLElement" can reference both HTML elements and Angular components
+	// The name between the "" is the reference to the element's variable
+	@ViewChild("inputField", {static: false}) fieldInputValue!: ElementRef;
 
 	constructor() { }
 
@@ -19,12 +21,16 @@ export class OutputPropertyComponent implements OnInit {
 	}
 
 	increaseValue() {
-		this.value++;
+		this.fieldInputValue.nativeElement.value++;
+		console.log(this.fieldInputValue.nativeElement.value);
+		
 		this.changeValue.emit({newValue: this.value});
 	}
 	
 	decreaseValue() {
-		this.value--;
+		this.fieldInputValue.nativeElement.value--;
+		console.log(this.fieldInputValue.nativeElement.value);
+
 		this.changeValue.emit({newValue: this.value});
 	}
 

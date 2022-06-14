@@ -9,6 +9,6 @@ export class AppComponent {
 	title = 'CoursesApplication';
 
 	onChangeValue(event: any) {
-		console.log(event.newValue);
+		
 	}
 }
