@@ -3,12 +3,10 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { OutputPropertyComponent } from './output-property/output-property.component';
 
 @NgModule({
 	declarations: [
-		AppComponent,
-  		OutputPropertyComponent
+		AppComponent
 	],
 	imports: [
 		BrowserModule,
