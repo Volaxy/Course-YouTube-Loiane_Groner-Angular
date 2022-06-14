@@ -1,0 +1,14 @@
+<!-- This tag will appear if the number of courses is greater than 0 -->
+<div *ngIf="courses.length > 0">
+    The courses appear here
+</div>
+
+<!-- This tag will appear if the number of courses is equal than 0 -->
+<div *ngIf="courses.length === 0">
+    No courses
+</div>
+
+<!-- If the "courses.length is equal than 0, the property "hidden" is TRUE, and if the condition is false, the property hidden is false -->
+<div [hidden]="courses.length === 0 ? true : false">
+    The property hidden
+</div>
