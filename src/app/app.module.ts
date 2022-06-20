@@ -7,12 +7,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { ConceptsComponent } from './concepts/concepts.component';
 import { YellowBackgroundDirective } from './shared/yellow-background.directive';
+import { HighlightMouseDirective } from './shared/highlight-mouse.directive';
 
 @NgModule({
 	declarations: [
 		AppComponent,
   ConceptsComponent,
-  YellowBackgroundDirective
+  YellowBackgroundDirective,
+  HighlightMouseDirective
 	],
 	imports: [
 		BrowserModule,
