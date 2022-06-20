@@ -1,5 +1,14 @@
 <p
-    [ngClass]="{
-        'background': backgroundOn
-    }"
-    (click)="onClick()">concepts works!</p>
+    [style.backgroundColor]="active ? 'violet' : 'cian'"
+    [style.color]="active ? 'white' : 'red'"
+    [style.fontSize]="24 + 'px'">
+    Teste sem ngStyle
+</p>
+
+<p
+    [ngStyle]="{
+        'backgroundColor': active ? 'violet' : 'cian',
+        'color': active ? 'white' : 'red'
+    }">
+    Teste do ngStyle
+</p>

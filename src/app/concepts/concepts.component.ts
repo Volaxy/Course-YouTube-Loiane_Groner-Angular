@@ -7,12 +7,8 @@ import { Component } from '@angular/core';
 })
 export class ConceptsComponent {
 
-    backgroundOn: boolean = true;
+    active: boolean = true;
 
     constructor() { }
-
-    onClick() {
-        this.backgroundOn = !this.backgroundOn;
-    }
 
 }
