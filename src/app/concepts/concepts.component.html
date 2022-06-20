@@ -1,4 +1,15 @@
-<p>Description: {{ task.desc }}</p>
-<!-- <p>Responsible: {{ task.responsible.name }}</p> -->
-<p>Responsible: {{ task.responsible !== null ? task.responsible.name : "Não há responsável" }}</p>
-<p>Responsible: {{ task.responsible?.name }}</p>
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <ng-content></ng-content>
+    </div>
+</div>
+<!-- ================================================ -->
+<div class="card" style="width: 18rem;">
+    <ng-content select=".tittle"></ng-content>
+
+    <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <ng-content select=".body"></ng-content>
+    </div>
+</div>
