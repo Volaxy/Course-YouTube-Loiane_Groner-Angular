@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { ConceptsComponent } from './concepts/concepts.component';
 import { YellowBackgroundDirective } from './shared/yellow-background.directive';
 import { HighlightMouseDirective } from './shared/highlight-mouse.directive';
+import { HighlightDirective } from './shared/highlight.directive';
 
 @NgModule({
 	declarations: [
 		AppComponent,
   ConceptsComponent,
   YellowBackgroundDirective,
-  HighlightMouseDirective
+  HighlightMouseDirective,
+  HighlightDirective
 	],
 	imports: [
 		BrowserModule,
