@@ -5,12 +5,12 @@ import { MatSliderModule } from "@angular/material/slider";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { DiretivaNgifComponent } from './diretiva-ngif/diretiva-ngif.component';
+import { DirectiveNgforComponent } from './directive-ngfor/directive-ngfor.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-  DiretivaNgifComponent
+  DirectiveNgforComponent
 	],
 	imports: [
 		BrowserModule,
