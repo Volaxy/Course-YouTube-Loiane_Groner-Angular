@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class DiretivaNgifComponent {
 
-    courses: string[] = [];
+    aba: string = "home";
 
     constructor() { }
 
