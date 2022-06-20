@@ -5,12 +5,12 @@ import { MatSliderModule } from "@angular/material/slider";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { DirectiveNgforComponent } from './directive-ngfor/directive-ngfor.component';
+import { ConceptsComponent } from './concepts/concepts.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-  DirectiveNgforComponent
+  ConceptsComponent
 	],
 	imports: [
 		BrowserModule,

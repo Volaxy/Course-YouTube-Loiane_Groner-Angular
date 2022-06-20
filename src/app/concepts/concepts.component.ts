@@ -1,0 +1,18 @@
+import { Component } from '@angular/core';
+
+@Component({
+    selector: 'app-concepts',
+    templateUrl: './concepts.component.html',
+    styleUrls: ['./concepts.component.css']
+})
+export class ConceptsComponent {
+
+    backgroundOn: boolean = true;
+
+    constructor() { }
+
+    onClick() {
+        this.backgroundOn = !this.backgroundOn;
+    }
+
+}
