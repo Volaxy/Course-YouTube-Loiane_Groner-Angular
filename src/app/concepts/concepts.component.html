@@ -1,14 +1,4 @@
-<p
-    [style.backgroundColor]="active ? 'violet' : 'cian'"
-    [style.color]="active ? 'white' : 'red'"
-    [style.fontSize]="24 + 'px'">
-    Teste sem ngStyle
-</p>
-
-<p
-    [ngStyle]="{
-        'backgroundColor': active ? 'violet' : 'cian',
-        'color': active ? 'white' : 'red'
-    }">
-    Teste do ngStyle
-</p>
+<p>Description: {{ task.desc }}</p>
+<!-- <p>Responsible: {{ task.responsible.name }}</p> -->
+<p>Responsible: {{ task.responsible !== null ? task.responsible.name : "Não há responsável" }}</p>
+<p>Responsible: {{ task.responsible?.name }}</p>

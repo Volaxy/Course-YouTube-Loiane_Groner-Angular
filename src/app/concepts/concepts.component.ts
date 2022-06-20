@@ -7,7 +7,11 @@ import { Component } from '@angular/core';
 })
 export class ConceptsComponent {
 
-    active: boolean = true;
+    task: any = {
+        desc: "Task description",
+        responsible: null
+        // responsible: {name: 'Loiane'}
+    }
 
     constructor() { }
 
